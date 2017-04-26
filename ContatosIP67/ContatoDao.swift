@@ -15,7 +15,7 @@ class ContatoDao: NSObject {
     static private var defaultDAO: ContatoDao!
    
     
-    override public init(){
+    override private init(){
         self.contatos=Array()
     }
     

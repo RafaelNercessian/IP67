@@ -19,7 +19,7 @@ class FormularioContatoViewController: UIViewController {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder:aDecoder)
-        self.dao = ContatoDao()
+        self.dao = ContatoDao.ContatoDaoInstance()
     }
     
     
