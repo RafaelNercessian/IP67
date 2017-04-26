@@ -16,6 +16,7 @@
 		DEA5C73E1EB0068900A19AEF /* ContatosIP67Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA5C73D1EB0068900A19AEF /* ContatosIP67Tests.swift */; };
 		DEA5C7491EB0068A00A19AEF /* ContatosIP67UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA5C7481EB0068A00A19AEF /* ContatosIP67UITests.swift */; };
 		DEA5C7591EB0244E00A19AEF /* Contato.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA5C7581EB0244E00A19AEF /* Contato.m */; };
+		DEA5C75B1EB0301400A19AEF /* ContatoDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA5C75A1EB0301400A19AEF /* ContatoDao.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		DEA5C7561EB0244E00A19AEF /* ContatosIP67-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ContatosIP67-Bridging-Header.h"; sourceTree = "<group>"; };
 		DEA5C7571EB0244E00A19AEF /* Contato.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contato.h; sourceTree = "<group>"; };
 		DEA5C7581EB0244E00A19AEF /* Contato.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contato.m; sourceTree = "<group>"; };
+		DEA5C75A1EB0301400A19AEF /* ContatoDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContatoDao.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 			children = (
 				DEA5C7251EB0068900A19AEF /* AppDelegate.swift */,
 				DEA5C7271EB0068900A19AEF /* FormularioContatoViewController.swift */,
+				DEA5C75A1EB0301400A19AEF /* ContatoDao.swift */,
 				DEA5C7571EB0244E00A19AEF /* Contato.h */,
 				DEA5C7581EB0244E00A19AEF /* Contato.m */,
 				DEA5C7291EB0068900A19AEF /* Main.storyboard */,
@@ -272,6 +275,7 @@
 			files = (
 				DEA5C7591EB0244E00A19AEF /* Contato.m in Sources */,
 				DEA5C7281EB0068900A19AEF /* FormularioContatoViewController.swift in Sources */,
+				DEA5C75B1EB0301400A19AEF /* ContatoDao.swift in Sources */,
 				DEA5C72E1EB0068900A19AEF /* ContatosIP67.xcdatamodeld in Sources */,
 				DEA5C7261EB0068900A19AEF /* AppDelegate.swift in Sources */,
 			);

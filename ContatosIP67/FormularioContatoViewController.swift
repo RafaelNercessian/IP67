@@ -14,16 +14,14 @@ class FormularioContatoViewController: UIViewController {
     @IBOutlet var telefone: UITextField!
     @IBOutlet var endereco: UITextField!
     @IBOutlet var site: UITextField!
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    var dao:ContatoDao!
+    
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder:aDecoder)
+        self.dao = ContatoDao()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    
     
     @IBAction func pegaDadosDoFormulario(){
         let contato: Contato = Contato()
@@ -34,9 +32,20 @@ class FormularioContatoViewController: UIViewController {
         contato.endereco=self.endereco.text!
         contato.site=self.site.text!
         
-        print(contato)
+        dao.adicionaContato(contato: contato)
     }
 
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+   
 
 }
 
