@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DEA5C7261EB0068900A19AEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA5C7251EB0068900A19AEF /* AppDelegate.swift */; };
-		DEA5C7281EB0068900A19AEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA5C7271EB0068900A19AEF /* ViewController.swift */; };
+		DEA5C7281EB0068900A19AEF /* FormularioContatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA5C7271EB0068900A19AEF /* FormularioContatoViewController.swift */; };
 		DEA5C72B1EB0068900A19AEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA5C7291EB0068900A19AEF /* Main.storyboard */; };
 		DEA5C72E1EB0068900A19AEF /* ContatosIP67.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DEA5C72C1EB0068900A19AEF /* ContatosIP67.xcdatamodeld */; };
 		DEA5C7301EB0068900A19AEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEA5C72F1EB0068900A19AEF /* Assets.xcassets */; };
@@ -37,7 +37,7 @@
 /* Begin PBXFileReference section */
 		DEA5C7221EB0068900A19AEF /* ContatosIP67.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContatosIP67.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEA5C7251EB0068900A19AEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DEA5C7271EB0068900A19AEF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DEA5C7271EB0068900A19AEF /* FormularioContatoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormularioContatoViewController.swift; sourceTree = "<group>"; };
 		DEA5C72A1EB0068900A19AEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DEA5C72D1EB0068900A19AEF /* ContatosIP67.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ContatosIP67.xcdatamodel; sourceTree = "<group>"; };
 		DEA5C72F1EB0068900A19AEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				DEA5C7251EB0068900A19AEF /* AppDelegate.swift */,
-				DEA5C7271EB0068900A19AEF /* ViewController.swift */,
+				DEA5C7271EB0068900A19AEF /* FormularioContatoViewController.swift */,
 				DEA5C7291EB0068900A19AEF /* Main.storyboard */,
 				DEA5C72F1EB0068900A19AEF /* Assets.xcassets */,
 				DEA5C7311EB0068900A19AEF /* LaunchScreen.storyboard */,
@@ -262,7 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEA5C7281EB0068900A19AEF /* ViewController.swift in Sources */,
+				DEA5C7281EB0068900A19AEF /* FormularioContatoViewController.swift in Sources */,
 				DEA5C72E1EB0068900A19AEF /* ContatosIP67.xcdatamodeld in Sources */,
 				DEA5C7261EB0068900A19AEF /* AppDelegate.swift in Sources */,
 			);
