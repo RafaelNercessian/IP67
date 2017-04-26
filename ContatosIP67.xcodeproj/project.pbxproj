@@ -15,6 +15,7 @@
 		DEA5C7331EB0068900A19AEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA5C7311EB0068900A19AEF /* LaunchScreen.storyboard */; };
 		DEA5C73E1EB0068900A19AEF /* ContatosIP67Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA5C73D1EB0068900A19AEF /* ContatosIP67Tests.swift */; };
 		DEA5C7491EB0068A00A19AEF /* ContatosIP67UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA5C7481EB0068A00A19AEF /* ContatosIP67UITests.swift */; };
+		DEA5C7591EB0244E00A19AEF /* Contato.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA5C7581EB0244E00A19AEF /* Contato.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,9 @@
 		DEA5C7441EB0068900A19AEF /* ContatosIP67UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContatosIP67UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEA5C7481EB0068A00A19AEF /* ContatosIP67UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatosIP67UITests.swift; sourceTree = "<group>"; };
 		DEA5C74A1EB0068A00A19AEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEA5C7561EB0244E00A19AEF /* ContatosIP67-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ContatosIP67-Bridging-Header.h"; sourceTree = "<group>"; };
+		DEA5C7571EB0244E00A19AEF /* Contato.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contato.h; sourceTree = "<group>"; };
+		DEA5C7581EB0244E00A19AEF /* Contato.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contato.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +105,14 @@
 			children = (
 				DEA5C7251EB0068900A19AEF /* AppDelegate.swift */,
 				DEA5C7271EB0068900A19AEF /* FormularioContatoViewController.swift */,
+				DEA5C7571EB0244E00A19AEF /* Contato.h */,
+				DEA5C7581EB0244E00A19AEF /* Contato.m */,
 				DEA5C7291EB0068900A19AEF /* Main.storyboard */,
 				DEA5C72F1EB0068900A19AEF /* Assets.xcassets */,
 				DEA5C7311EB0068900A19AEF /* LaunchScreen.storyboard */,
 				DEA5C7341EB0068900A19AEF /* Info.plist */,
 				DEA5C72C1EB0068900A19AEF /* ContatosIP67.xcdatamodeld */,
+				DEA5C7561EB0244E00A19AEF /* ContatosIP67-Bridging-Header.h */,
 			);
 			path = ContatosIP67;
 			sourceTree = "<group>";
@@ -196,6 +203,7 @@
 				TargetAttributes = {
 					DEA5C7211EB0068800A19AEF = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					DEA5C7381EB0068900A19AEF = {
@@ -262,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEA5C7591EB0244E00A19AEF /* Contato.m in Sources */,
 				DEA5C7281EB0068900A19AEF /* FormularioContatoViewController.swift in Sources */,
 				DEA5C72E1EB0068900A19AEF /* ContatosIP67.xcdatamodeld in Sources */,
 				DEA5C7261EB0068900A19AEF /* AppDelegate.swift in Sources */,
@@ -414,10 +423,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ContatosIP67/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.caelum.ContatosIP67;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ContatosIP67/ContatosIP67-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -426,10 +438,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ContatosIP67/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.caelum.ContatosIP67;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ContatosIP67/ContatosIP67-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
