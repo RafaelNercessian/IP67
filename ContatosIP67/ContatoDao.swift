@@ -32,5 +32,9 @@ class ContatoDao: NSObject {
         return defaultDAO
     }
     
+    func buscaContatoNaPosicao(posicao:Int)->Contato{
+        return contatos[posicao]
+    }
+    
 
 }
