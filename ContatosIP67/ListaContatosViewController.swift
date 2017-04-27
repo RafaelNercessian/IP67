@@ -12,11 +12,20 @@ class ListaContatosViewController: UITableViewController {
     
     var dao:ContatoDao!
     static let cellIdentifier:String="Cell"
+    var contatoSelecionado: Contato!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.dao=ContatoDao.ContatoDaoInstance()
         self.navigationItem.leftBarButtonItem=self.editButtonItem
+    }
+    
+    func exibeFormulario(){
+        let storyboard: UIStoryboard=UIStoryboard(name: "Main", bundle: nil)
+        let formulario=storyboard.instantiateViewController(withIdentifier: "Form-Contato") as! FormularioContatoViewController
+        formulario.contato=contatoSelecionado
+        self.navigationController?.pushViewController(formulario, animated: true)
+        
     }
 
     override func viewDidLoad() {
@@ -77,6 +86,11 @@ class ListaContatosViewController: UITableViewController {
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        contatoSelecionado=dao.buscaContatoNaPosicao(posicao: indexPath.row)
+        self.exibeFormulario()
     }
     
 

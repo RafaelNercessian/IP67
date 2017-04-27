@@ -41,14 +41,19 @@ class FormularioContatoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        if contato != nil{
+            self.nome.text=contato.nome
+            self.telefone.text=contato.telefone
+            self.endereco.text=contato.endereco
+            self.site.text=contato.site
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-   
+       
 
 }
 
