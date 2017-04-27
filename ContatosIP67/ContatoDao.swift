@@ -36,5 +36,9 @@ class ContatoDao: NSObject {
         return contatos[posicao]
     }
     
+    func removeContatoDaPosicao(posicao:Int){
+        contatos.remove(at: posicao)
+    }
+    
 
 }
