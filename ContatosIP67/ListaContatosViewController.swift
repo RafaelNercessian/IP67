@@ -29,6 +29,15 @@ class ListaContatosViewController: UITableViewController,FormularioContatoViewCo
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "FormSegue"{
+                if let formulario=segue.destination as?FormularioContatoViewController{
+                    formulario.delegate=self
+                }
+        }
+        
+    }
+    
     func contatoAtualizado(contato: Contato) {
         print ("contato atualizado: \(contato.nome)")
     }
