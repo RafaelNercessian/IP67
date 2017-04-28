@@ -13,7 +13,7 @@ class ContatoDao: NSObject {
     
     var contatos: Array<Contato>!
     static private var defaultDAO: ContatoDao!
-   
+    
     
     override private init(){
         self.contatos=Array()
@@ -38,6 +38,10 @@ class ContatoDao: NSObject {
     
     func removeContatoDaPosicao(posicao:Int){
         contatos.remove(at: posicao)
+    }
+    
+    func buscaPosicaoDoContato(_contato:Contato) -> Int{
+        return contatos.index(of: _contato)!
     }
     
 

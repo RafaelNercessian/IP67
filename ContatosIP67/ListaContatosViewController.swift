@@ -13,6 +13,7 @@ class ListaContatosViewController: UITableViewController,FormularioContatoViewCo
     var dao:ContatoDao!
     static let cellIdentifier:String="Cell"
     var contatoSelecionado: Contato!
+    var linhaDestaque: IndexPath?
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -38,13 +39,14 @@ class ListaContatosViewController: UITableViewController,FormularioContatoViewCo
         
     }
     
-    func contatoAtualizado(contato: Contato) {
-        print ("contato atualizado: \(contato.nome)")
+    func contatoAdicionado(contato: Contato) {
+        self.linhaDestaque=IndexPath(row: dao.buscaPosicaoDoContato(_contato: contato), section: 0)
     }
     
-    func contatoAdicionado(contato: Contato) {
-        print("contato adicionado: \(contato.nome)")
+    func contatoAtualizado(contato: Contato) {
+        self.linhaDestaque=IndexPath(row: dao.buscaPosicaoDoContato(_contato: contato), section: 0)
     }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -109,6 +111,16 @@ class ListaContatosViewController: UITableViewController,FormularioContatoViewCo
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         contatoSelecionado=dao.buscaContatoNaPosicao(posicao: indexPath.row)
         self.exibeFormulario()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if let linha=self.linhaDestaque{
+            self.tableView.selectRow(at: self.linhaDestaque!, animated: true, scrollPosition: .middle)
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)){
+                self.tableView.deselectRow(at: linha, animated: true)
+                self.linhaDestaque = .none
+            }
+        }
     }
     
 
