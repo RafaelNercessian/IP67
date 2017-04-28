@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ListaContatosViewController: UITableViewController {
+class ListaContatosViewController: UITableViewController,FormularioContatoViewControllerDelegate {
     
     var dao:ContatoDao!
     static let cellIdentifier:String="Cell"
@@ -23,9 +23,18 @@ class ListaContatosViewController: UITableViewController {
     func exibeFormulario(){
         let storyboard: UIStoryboard=UIStoryboard(name: "Main", bundle: nil)
         let formulario=storyboard.instantiateViewController(withIdentifier: "Form-Contato") as! FormularioContatoViewController
+        formulario.delegate=self
         formulario.contato=contatoSelecionado
         self.navigationController?.pushViewController(formulario, animated: true)
         
+    }
+    
+    func contatoAtualizado(contato: Contato) {
+        print ("contato atualizado: \(contato.nome)")
+    }
+    
+    func contatoAdicionado(contato: Contato) {
+        print("contato adicionado: \(contato.nome)")
     }
 
     override func viewDidLoad() {

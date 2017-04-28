@@ -16,6 +16,7 @@ class FormularioContatoViewController: UIViewController {
     @IBOutlet var site: UITextField!
     var dao:ContatoDao!
     var contato: Contato!
+    var delegate:FormularioContatoViewControllerDelegate?
     
     
     required init?(coder aDecoder: NSCoder) {
@@ -26,11 +27,17 @@ class FormularioContatoViewController: UIViewController {
    @IBAction func criaContato(){
         self.pegaDadosDoFormulario()
         dao.adicionaContato(contato: contato)
+        if self.delegate != nil{
+            self.delegate?.contatoAdicionado(contato: contato)
+        }
         navigationController?.popViewController(animated: true)
     }
     
     func atualizaContato(){
         pegaDadosDoFormulario()
+        if self.delegate != nil{
+            self.delegate?.contatoAtualizado(contato: contato)
+        }
         _=self.navigationController?.popViewController(animated: true)
     }
     

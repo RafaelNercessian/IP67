@@ -18,6 +18,7 @@
 		DEA5C7591EB0244E00A19AEF /* Contato.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA5C7581EB0244E00A19AEF /* Contato.m */; };
 		DEA5C75B1EB0301400A19AEF /* ContatoDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA5C75A1EB0301400A19AEF /* ContatoDao.swift */; };
 		DEA6B4661EB15DE900ABA68B /* ListaContatosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA6B4651EB15DE900ABA68B /* ListaContatosViewController.swift */; };
+		DEC5A6271EB2C3DD005DD007 /* FormularioContatoViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC5A6261EB2C3DD005DD007 /* FormularioContatoViewControllerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		DEA5C7581EB0244E00A19AEF /* Contato.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contato.m; sourceTree = "<group>"; };
 		DEA5C75A1EB0301400A19AEF /* ContatoDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContatoDao.swift; sourceTree = "<group>"; };
 		DEA6B4651EB15DE900ABA68B /* ListaContatosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListaContatosViewController.swift; sourceTree = "<group>"; };
+		DEC5A6261EB2C3DD005DD007 /* FormularioContatoViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FormularioContatoViewControllerDelegate.swift; path = ../FormularioContatoViewControllerDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 		DEA5C7241EB0068900A19AEF /* ContatosIP67 */ = {
 			isa = PBXGroup;
 			children = (
+				DEC5A6261EB2C3DD005DD007 /* FormularioContatoViewControllerDelegate.swift */,
 				DEA5C7251EB0068900A19AEF /* AppDelegate.swift */,
 				DEA5C7271EB0068900A19AEF /* FormularioContatoViewController.swift */,
 				DEA5C75A1EB0301400A19AEF /* ContatoDao.swift */,
@@ -278,6 +281,7 @@
 			files = (
 				DEA5C7591EB0244E00A19AEF /* Contato.m in Sources */,
 				DEA5C7281EB0068900A19AEF /* FormularioContatoViewController.swift in Sources */,
+				DEC5A6271EB2C3DD005DD007 /* FormularioContatoViewControllerDelegate.swift in Sources */,
 				DEA5C75B1EB0301400A19AEF /* ContatoDao.swift in Sources */,
 				DEA6B4661EB15DE900ABA68B /* ListaContatosViewController.swift in Sources */,
 				DEA5C72E1EB0068900A19AEF /* ContatosIP67.xcdatamodeld in Sources */,
