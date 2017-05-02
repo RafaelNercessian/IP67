@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE429C931EB9433D0008D84B /* GerenciadorDeAcoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE429C921EB9433D0008D84B /* GerenciadorDeAcoes.swift */; };
 		DEA5C7261EB0068900A19AEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA5C7251EB0068900A19AEF /* AppDelegate.swift */; };
 		DEA5C7281EB0068900A19AEF /* FormularioContatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA5C7271EB0068900A19AEF /* FormularioContatoViewController.swift */; };
 		DEA5C72B1EB0068900A19AEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA5C7291EB0068900A19AEF /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DE429C921EB9433D0008D84B /* GerenciadorDeAcoes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GerenciadorDeAcoes.swift; sourceTree = "<group>"; };
 		DEA5C7221EB0068900A19AEF /* ContatosIP67.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContatosIP67.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEA5C7251EB0068900A19AEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEA5C7271EB0068900A19AEF /* FormularioContatoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormularioContatoViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				DEC5A6261EB2C3DD005DD007 /* FormularioContatoViewControllerDelegate.swift */,
+				DE429C921EB9433D0008D84B /* GerenciadorDeAcoes.swift */,
 				DEA5C7251EB0068900A19AEF /* AppDelegate.swift */,
 				DEA5C7271EB0068900A19AEF /* FormularioContatoViewController.swift */,
 				DEA5C75A1EB0301400A19AEF /* ContatoDao.swift */,
@@ -281,6 +284,7 @@
 			files = (
 				DEA5C7591EB0244E00A19AEF /* Contato.m in Sources */,
 				DEA5C7281EB0068900A19AEF /* FormularioContatoViewController.swift in Sources */,
+				DE429C931EB9433D0008D84B /* GerenciadorDeAcoes.swift in Sources */,
 				DEC5A6271EB2C3DD005DD007 /* FormularioContatoViewControllerDelegate.swift in Sources */,
 				DEA5C75B1EB0301400A19AEF /* ContatoDao.swift in Sources */,
 				DEA6B4661EB15DE900ABA68B /* ListaContatosViewController.swift in Sources */,
