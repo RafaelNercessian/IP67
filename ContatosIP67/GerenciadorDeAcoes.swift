@@ -39,9 +39,20 @@ class GerenciadorDeAcoes: NSObject {
         self.controller.present(alertView, animated: true, completion: nil)
     }
     
+    private func abrirAplicativo(com url:String){
+        UIApplication.shared.open(URL(string: url)!, options: [:], completionHandler: nil)
+    }
+    
     
     private func ligar(){
-        
+        let device=UIDevice.current
+        if device.model == "iPhone"{
+            print("UUID \(device.identifierForVendor!)")
+                abrirAplicativo(com: "tel: "+self.contato.telefone!)
+        }else{
+            let alert = UIAlertController(title: "Impossivel fazer ligacoes", message: "Seu dispositivo nao e um Iphone", preferredStyle: .alert)
+            self.controller.present(alert,animated: true,completion: nil)
+        }
     }
     
     private func abrirSite() {
@@ -53,11 +64,16 @@ class GerenciadorDeAcoes: NSObject {
     }
     
     private func abrirMapa(){
-        
+        let url = ("http://maps.google.com/maps?q=" + self.contato.endereco!).addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
+        abrirAplicativo(com: url)
     }
     
     private func abrirNavegador(){
-        
+        var url = contato.site!
+        if !url.hasPrefix("http://"){
+            url="http://"+url
+        }
+        abrirAplicativo(com: url)
     }
     
 

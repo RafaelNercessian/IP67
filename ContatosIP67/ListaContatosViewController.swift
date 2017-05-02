@@ -89,7 +89,7 @@ class ListaContatosViewController: UITableViewController,FormularioContatoViewCo
         let ponto = gesture.location(in: self.tableView)
         if let indexPath = self.tableView.indexPathForRow(at:ponto){
             let contato = self.dao.buscaContatoNaPosicao(posicao: indexPath.row)
-            let acoes = GerenciadorDeAcoes(do: contatoSelecionado)
+            let acoes = GerenciadorDeAcoes(do: contato)
             acoes.exibirAcoes(em: self)
         }
     }
