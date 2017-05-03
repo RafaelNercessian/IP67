@@ -63,10 +63,10 @@ class FormularioContatoViewController: UIViewController, UINavigationControllerD
             self.site.text=contato.site
             let botaoAlterar=UIBarButtonItem(title: "Confirmar", style: .plain, target: self, action: #selector(atualizaContato))
             self.navigationItem.rightBarButtonItem=botaoAlterar
-            let tap = UITapGestureRecognizer(target: self, action: #selector(selecionaFoto(sender:)))
-            self.imageView.addGestureRecognizer(tap)
-
         }
+        let tap = UITapGestureRecognizer(target: self, action: #selector(selecionaFoto(sender:)))
+        self.imageView.addGestureRecognizer(tap)
+
     }
 
     override func didReceiveMemoryWarning() {
