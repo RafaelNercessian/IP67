@@ -8,12 +8,13 @@
 
 import UIKit
 
-class FormularioContatoViewController: UIViewController {
+class FormularioContatoViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     @IBOutlet var nome: UITextField!
     @IBOutlet var telefone: UITextField!
     @IBOutlet var endereco: UITextField!
     @IBOutlet var site: UITextField!
+    @IBOutlet var imageView:UIImageView!
     var dao:ContatoDao!
     var contato: Contato!
     var delegate:FormularioContatoViewControllerDelegate?
@@ -62,6 +63,9 @@ class FormularioContatoViewController: UIViewController {
             self.site.text=contato.site
             let botaoAlterar=UIBarButtonItem(title: "Confirmar", style: .plain, target: self, action: #selector(atualizaContato))
             self.navigationItem.rightBarButtonItem=botaoAlterar
+            let tap = UITapGestureRecognizer(target: self, action: #selector(selecionaFoto(sender:)))
+            self.imageView.addGestureRecognizer(tap)
+
         }
     }
 
@@ -69,7 +73,29 @@ class FormularioContatoViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-       
+    
+    
+    func selecionaFoto(sender: AnyObject){
+        if UIImagePickerController.isSourceTypeAvailable(.camera){
+            
+        }else{
+            let imagePicker = UIImagePickerController()
+            imagePicker.sourceType = .photoLibrary
+            imagePicker.allowsEditing = true
+            imagePicker.delegate = self
+            self.present(imagePicker, animated: true, completion: nil)
+        }
+    }
+    
+    func imagePickerController(picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        if let imageSelecionada = info[UIImagePickerControllerEditedImage] as? UIImage {
+            self.imageView.image = imageSelecionada
+        }
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    
 
 }
 

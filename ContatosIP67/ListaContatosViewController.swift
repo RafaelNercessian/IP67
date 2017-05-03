@@ -53,6 +53,7 @@ class ListaContatosViewController: UITableViewController,FormularioContatoViewCo
 
         let longPress = UILongPressGestureRecognizer(target: self, action: #selector(exibirMaisAcoes(gesture:)))
         self.tableView.addGestureRecognizer(longPress)
+      
     }
 
     override func didReceiveMemoryWarning() {
