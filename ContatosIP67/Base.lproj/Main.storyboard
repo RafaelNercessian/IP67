@@ -127,11 +127,11 @@
             </objects>
             <point key="canvasLocation" x="-911" y="760"/>
         </scene>
-        <!--Item-->
+        <!--Contatos-->
         <scene sceneID="bhk-n5-Jil">
             <objects>
                 <navigationController id="TXN-Ie-wAE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="02e-WX-ncc"/>
+                    <tabBarItem key="tabBarItem" title="Contatos" image="lista-contatos" id="02e-WX-ncc"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="sSr-hU-QRP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -199,11 +199,11 @@
             </objects>
             <point key="canvasLocation" x="-3409" y="380"/>
         </scene>
-        <!--Item-->
+        <!--Mapa-->
         <scene sceneID="Ot9-bj-4wM">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Nic-Cd-6Kh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="cJv-6O-saz"/>
+                    <tabBarItem key="tabBarItem" title="Mapa" image="mapa-contatos" id="cJv-6O-saz"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5Xp-SD-iWd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -219,4 +219,8 @@
             <point key="canvasLocation" x="-1855" y="760"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="lista-contatos" width="30" height="30"/>
+        <image name="mapa-contatos" width="30" height="30"/>
+    </resources>
 </document>
