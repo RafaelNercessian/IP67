@@ -30,11 +30,15 @@ class FormularioContatoViewController: UIViewController, UINavigationControllerD
     
    @IBAction func criaContato(){
         self.pegaDadosDoFormulario()
-        dao.adicionaContato(contato: contato)
+    if (self.endereco.text?.characters.count)! > 0 {
+        self.dao.adicionaContato(contato: self.contato)
         if self.delegate != nil{
             self.delegate?.contatoAdicionado(contato: contato)
         }
         navigationController?.popViewController(animated: true)
+    }
+    
+        
     }
     
     @IBAction func buscarCoordenadas(sender: UIButton){
