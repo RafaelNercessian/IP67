@@ -122,6 +122,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Yzc-35-USG"/>
+                    <connections>
+                        <outlet property="mapa" destination="Fch-aX-z6v" id="azf-Vw-VuA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E0p-UJ-etc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
