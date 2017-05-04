@@ -65,7 +65,14 @@ class FormularioContatoViewController: UIViewController, UINavigationControllerD
         }
         self.contato.nome=self.nome.text!
         self.contato.telefone=self.telefone.text!
-        self.contato.endereco=self.endereco.text!
+        if(self.endereco.text?.characters.count == 0){
+            let alertController = UIAlertController(title: "Contatos IP67", message:
+                "Endereço faltando, por favor insira!", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+        }else{
+            self.contato.endereco=self.endereco.text!
+        }
         self.contato.site=self.site.text!
         self.contato.foto = self.imageView.image
         if let latitude = Double(self.latitude.text!) {
