@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-class ContatoDao: NSObject {
+class ContatoDao: CoreDataUtil {
     
     var contatos: Array<Contato>!
     static private var defaultDAO: ContatoDao!
