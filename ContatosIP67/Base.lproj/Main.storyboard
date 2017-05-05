@@ -78,14 +78,6 @@
                                 <frame key="frameInset" minX="67" minY="113" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l3z-Rc-ODJ">
-                                <frame key="frameInset" minX="289" minY="524" width="36" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="gps"/>
-                                <connections>
-                                    <action selector="buscarCoordenadasWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vFc-fo-tnd"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Latitude: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="syG-g1-Ea6">
                                 <frame key="frameInset" minX="39" minY="515" width="72" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -114,6 +106,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="M5A-am-gNd">
+                                <frame key="frameInset" minX="301" minY="502" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l3z-Rc-ODJ">
+                                <frame key="frameInset" minX="297" minY="558" width="28" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="gps"/>
+                                <connections>
+                                    <action selector="buscarCoordenadasWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vFc-fo-tnd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -130,6 +134,7 @@
                         <outlet property="endereco" destination="41P-BA-mwz" id="9fI-tP-wna"/>
                         <outlet property="imageView" destination="SFH-lK-0OP" id="lVC-Tk-fZ0"/>
                         <outlet property="latitude" destination="Vk2-uL-sQx" id="Bu3-BI-hRM"/>
+                        <outlet property="loading" destination="M5A-am-gNd" id="B2O-jz-sxJ"/>
                         <outlet property="longitude" destination="i4Y-Xm-7iK" id="131-eC-BJd"/>
                         <outlet property="nome" destination="Zeu-ow-B5q" id="oGu-Z0-VSO"/>
                         <outlet property="site" destination="8CR-9j-mfn" id="MD9-OP-kKM"/>

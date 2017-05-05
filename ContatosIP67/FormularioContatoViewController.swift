@@ -18,6 +18,7 @@ class FormularioContatoViewController: UIViewController, UINavigationControllerD
     @IBOutlet var imageView:UIImageView!
     @IBOutlet var latitude: UITextField!
     @IBOutlet var longitude: UITextField!
+    @IBOutlet weak var loading: UIActivityIndicatorView!
     var dao:ContatoDao!
     var contato: Contato!
     var delegate:FormularioContatoViewControllerDelegate?
@@ -48,6 +49,7 @@ class FormularioContatoViewController: UIViewController, UINavigationControllerD
             alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
             self.present(alertController, animated: true, completion: nil)
         }else{
+             self.loading.startAnimating()
             let geocoder = CLGeocoder()
             geocoder.geocodeAddressString(self.endereco.text!) {
                 (resultado, error) in
@@ -57,6 +59,8 @@ class FormularioContatoViewController: UIViewController, UINavigationControllerD
                     self.latitude.text=cordenada.latitude.description
                     self.longitude.text=cordenada.longitude.description
                 }
+                self.loading.stopAnimating()
+                sender.isEnabled = true
             }
         }
     }
