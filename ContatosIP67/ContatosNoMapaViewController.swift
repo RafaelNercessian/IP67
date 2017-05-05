@@ -12,6 +12,8 @@ class ContatosNoMapaViewController: UIViewController {
     
      @IBOutlet weak var mapa: MKMapView!
      let locationManager=CLLocationManager()
+     var contatos: [Contato] = Array()
+     let dao:ContatoDao = ContatoDao.ContatoDaoInstance()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +28,16 @@ class ContatosNoMapaViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.contatos=dao.lista()
+        self.mapa.addAnnotations(self.contatos)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.mapa.removeAnnotations(self.contatos)
+    }
+}
+    
 
     /*
     // MARK: - Navigation
@@ -37,4 +49,4 @@ class ContatosNoMapaViewController: UIViewController {
     }
     */
 
-}
+

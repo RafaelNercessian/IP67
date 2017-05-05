@@ -44,5 +44,9 @@ class ContatoDao: NSObject {
         return contatos.index(of: _contato)!
     }
     
+    func lista()->[Contato]{
+        return contatos
+    }
+    
 
 }
