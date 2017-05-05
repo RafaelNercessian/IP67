@@ -48,6 +48,18 @@ class ContatosNoMapaViewController: UIViewController,MKMapViewDelegate {
                 pino=reusablePin
             }else{
                 pino=MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+                let pinToZoomOn = pino.annotation
+                
+                // Opcionalmente, pode-se especificar os limítrofes do zoom
+                let span = MKCoordinateSpanMake(0.5, 0.5)
+                
+                // Ou utilizar o mapa corrente e apenas centralizá-lo
+                // let span = mapView.region.span
+                
+                // Agora move o mapa...
+                let region = MKCoordinateRegion(center: pinToZoomOn!.coordinate, span: span)
+                mapView.setRegion(region, animated: true)
+                
             }
             if let contato = annotation as? Contato{
                 pino.pinTintColor = UIColor.red
