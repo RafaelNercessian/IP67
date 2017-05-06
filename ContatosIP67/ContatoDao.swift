@@ -20,12 +20,13 @@ class ContatoDao: CoreDataUtil {
         super.init()
         self.inserirDadosIniciais()
         print("BD,\(NSHomeDirectory())")
+        self.carregaContatos()
     }
     
     
     func adicionaContato(contato: Contato){
             contatos.append(contato)
-            print(contatos)
+            saveContext()
     }
     
     static func ContatoDaoInstance() -> ContatoDao{
@@ -69,5 +70,20 @@ class ContatoDao: CoreDataUtil {
         }
     }
     
-
+    func carregaContatos(){
+        let busca = NSFetchRequest<Contato>(entityName: "Contato")
+        let orderPorNome = NSSortDescriptor(key: "nome", ascending: true)
+            
+        busca.sortDescriptors = [orderPorNome]
+                
+        do {
+            self.contatos = try self.persistentContainer.viewContext.fetch(busca)
+        }catch let error as NSError {
+            print("Fetch Falhou: \(error.localizedDescription)")
+            }
+        }
+    
+    func novoContato() -> Contato{
+        return NSEntityDescription.insertNewObject(forEntityName: "Contato", into: self.persistentContainer.viewContext) as! Contato
+    }
 }

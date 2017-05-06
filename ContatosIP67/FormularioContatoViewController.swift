@@ -76,7 +76,7 @@ class FormularioContatoViewController: UIViewController, UINavigationControllerD
     
     func pegaDadosDoFormulario(){
         if contato==nil{
-            self.contato=Contato()
+            self.contato=dao.novoContato()
         }
         self.contato.nome=self.nome.text!
         self.contato.telefone=self.telefone.text!
