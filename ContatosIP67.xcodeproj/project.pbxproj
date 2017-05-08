@@ -10,6 +10,7 @@
 		2F2F2414E73E70C42DDA472A /* Pods_ContatosIP67UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 164AD48215C7D18082AEF3AA /* Pods_ContatosIP67UITests.framework */; };
 		792F7D3C1C10C648B0DAA8B7 /* Pods_ContatosIP67Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BEAFADDEE244B99815CAF4E /* Pods_ContatosIP67Tests.framework */; };
 		DE429C931EB9433D0008D84B /* GerenciadorDeAcoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE429C921EB9433D0008D84B /* GerenciadorDeAcoes.swift */; };
+		DE58B8F21EC12C5A009BBE1F /* TemperaturaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE58B8F11EC12C5A009BBE1F /* TemperaturaViewController.swift */; };
 		DEA33F281EBA9B7800855D07 /* ContatosNoMapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA33F271EBA9B7800855D07 /* ContatosNoMapaViewController.swift */; };
 		DEA5C7261EB0068900A19AEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA5C7251EB0068900A19AEF /* AppDelegate.swift */; };
 		DEA5C7281EB0068900A19AEF /* FormularioContatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA5C7271EB0068900A19AEF /* FormularioContatoViewController.swift */; };
@@ -54,6 +55,7 @@
 		DA88999AE1059C0EE757868D /* Pods-ContatosIP67UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContatosIP67UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ContatosIP67UITests/Pods-ContatosIP67UITests.release.xcconfig"; sourceTree = "<group>"; };
 		DCFB3A29D9FE537F430B1EA1 /* Pods_ContatosIP67.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ContatosIP67.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE429C921EB9433D0008D84B /* GerenciadorDeAcoes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GerenciadorDeAcoes.swift; sourceTree = "<group>"; };
+		DE58B8F11EC12C5A009BBE1F /* TemperaturaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperaturaViewController.swift; sourceTree = "<group>"; };
 		DEA33F271EBA9B7800855D07 /* ContatosNoMapaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContatosNoMapaViewController.swift; sourceTree = "<group>"; };
 		DEA33F291EBAAEE800855D07 /* Vila Mariana.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Vila Mariana.gpx"; sourceTree = "<group>"; };
 		DEA5C7221EB0068900A19AEF /* ContatosIP67.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContatosIP67.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				DEC5A6261EB2C3DD005DD007 /* FormularioContatoViewControllerDelegate.swift */,
+				DE58B8F11EC12C5A009BBE1F /* TemperaturaViewController.swift */,
 				DEB2828C1EBD3C6200704E4D /* CoreDataUtil.swift */,
 				DEA33F271EBA9B7800855D07 /* ContatosNoMapaViewController.swift */,
 				DE429C921EB9433D0008D84B /* GerenciadorDeAcoes.swift */,
@@ -485,6 +488,7 @@
 				DEA5C75B1EB0301400A19AEF /* ContatoDao.swift in Sources */,
 				DEA6B4661EB15DE900ABA68B /* ListaContatosViewController.swift in Sources */,
 				DEA5C72E1EB0068900A19AEF /* ContatosIP67.xcdatamodeld in Sources */,
+				DE58B8F21EC12C5A009BBE1F /* TemperaturaViewController.swift in Sources */,
 				DEB2828D1EBD3C6200704E4D /* CoreDataUtil.swift in Sources */,
 				DEA5C7261EB0068900A19AEF /* AppDelegate.swift in Sources */,
 			);

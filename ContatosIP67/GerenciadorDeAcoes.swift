@@ -30,7 +30,11 @@ class GerenciadorDeAcoes: NSObject {
         let ligarParaContato = UIAlertAction(title: "Ligar", style: .default){
             action in self.ligar()
         }
+        let exibirTemperatura=UIAlertAction(title: "Visualizar clima", style: .default){
+            action in self.exibirTemperatura()
+        }
     
+        alertView.addAction(exibirTemperatura)
         alertView.addAction(cancelar)
         alertView.addAction(ligarParaContato)
         alertView.addAction(exibirContatoNoMapa)
@@ -39,10 +43,16 @@ class GerenciadorDeAcoes: NSObject {
         self.controller.present(alertView, animated: true, completion: nil)
     }
     
+    func exibirTemperatura(){
+        let temperaturaViewController=controller.storyboard?.instantiateViewController(withIdentifier: "temperaturaViewController") as! TemperaturaViewController
+        
+        controller.navigationController?.pushViewController(temperaturaViewController, animated: true)
+    }
+    
     private func abrirAplicativo(com url:String){
         UIApplication.shared.open(URL(string: url)!, options: [:], completionHandler: nil)
     }
-    
+  
     
     private func ligar(){
         let device=UIDevice.current
